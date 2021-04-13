@@ -100,7 +100,6 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 let g:vim_markdown_math = 1
 let g:vim_markdown_strike_through = 1
 let g:vim_markdown_new_list_item_indent = 4
-let g:vimtex_compiler_latexmk = { 'build_dir' : 'build' }
 
 Plug 'iamcco/mathjax-support-for-mkdp', { 'for': 'markdown' }
 
@@ -115,6 +114,7 @@ imap <silent> <F9> <Plug>StopMarkdownPreview
 "Tex Support{{{
 Plug 'lervag/vimtex', { 'for': 'tex' }
 let g:tex_flavor='latex'
+let g:vimtex_compiler_latexmk = { 'build_dir' : 'build' }
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=1
 let g:tex_conceal='abdmg'
