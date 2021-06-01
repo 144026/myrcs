@@ -224,11 +224,12 @@ fi
 # user custom
 alias llh='ll -h'
 alias lla='ll -a'
+
 alias gitac='git add -A && git commit'
 alias gitcp='git commit && git push'
 alias gitacp='git add -A && git commit && git push'
 
-alias yw='/home/drh/Workspace/cybersec/netsec2018/4output/05_文档/yw工具分类/'
+alias rsync='rsync -avh --progress'
 
 alias rm='echo -e "\e[31mNO rm !\e[0m Use mv !"'
 
