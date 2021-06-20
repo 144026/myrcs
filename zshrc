@@ -17,8 +17,8 @@ WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 export PROMPT_EOL_MARK=""
 
 # configure key keybindings
-# bindkey -e                                        # emacs key bindings
-bindkey -v                                        # zsh native vi-editor mode
+bindkey -e                                        # emacs key bindings
+# bindkey -v                                        # zsh native vi-editor mode
 bindkey "^?" backward-delete-char                 # fix native vi mode backspace failure
 
 bindkey ' ' magic-space                           # do history expansion on space
@@ -229,7 +229,7 @@ alias gitac='git add -A && git commit'
 alias gitcp='git commit && git push'
 alias gitacp='git add -A && git commit && git push'
 
-alias rsync='rsync -avh --progress'
+alias rs='rsync -avh --progress'
 
 alias rm='echo -e "\e[31mNO rm !\e[0m Use mv !"'
 
