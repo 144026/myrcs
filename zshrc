@@ -234,8 +234,8 @@ alias rs='rsync -avh --progress'
 alias rm='echo -e "\e[31mNO rm !\e[0m Use mv !"'
 
 # git branch at right prompt
-if [ -f /lib/git-core/git-sh-prompt ]; then
-	. /lib/git-core/git-sh-prompt
+if [ -f /usr/lib/git-core/git-sh-prompt ]; then
+	. /usr/lib/git-core/git-sh-prompt
  	PROMPT=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)──}(%B%F{%(#.red.blue)}%n%(#.💀.@)%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]`__git_ps1 "-(%%B%%F{cyan}%s%%b%%F{%%(#.blue.green)})"`\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
 	GIT_PS1_STATESEPARATOR=" "
 	GIT_PS1_SHOWDIRTYSTATE="true"
