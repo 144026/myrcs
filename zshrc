@@ -246,3 +246,15 @@ if [ -f /usr/lib/git-core/git-sh-prompt ]; then
 # 	GIT_PS1_DESCRIBE_STYLE="contains"
 # 	GIT_PS1_SHOWCOLORHINTS="true"
 fi
+
+# gpg-agent setup
+if [ -f /usr/bin/gpg ]; then
+        # set SSH_AUTH_SOCK
+        unset SSH_AGENT_PID
+        if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+                export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+        fi
+        # configure pinentry to use the correct TTY
+        export GPG_TTY=$(tty)
+        gpg-connect-agent updatestartuptty /bye >/dev/null
+fi
