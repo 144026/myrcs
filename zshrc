@@ -91,12 +91,12 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+    # We have color support; assume it's compliant with Ecma-48
+    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+    # a case would tend to support setf rather than setaf.)
+    color_prompt=yes
     else
-	color_prompt=
+    color_prompt=
     fi
 fi
 
@@ -106,53 +106,53 @@ if [ "$color_prompt" = yes ]; then
 
     # enable syntax-highlighting
     if [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && [ "$color_prompt" = yes ]; then
-	# ksharrays breaks the plugin. This is fixed now but let's disable it in the
-	# meantime.
-	# https://github.com/zsh-users/zsh-syntax-highlighting/pull/689
-	unsetopt ksharrays
-	. /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-	ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-	ZSH_HIGHLIGHT_STYLES[default]=none
-	ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
-	ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=cyan,bold
-	ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=green,underline
-	ZSH_HIGHLIGHT_STYLES[global-alias]=fg=magenta
-	ZSH_HIGHLIGHT_STYLES[precommand]=fg=green,underline
-	ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=blue,bold
-	ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=green,underline
-	ZSH_HIGHLIGHT_STYLES[path]=underline
-	ZSH_HIGHLIGHT_STYLES[path_pathseparator]=
-	ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]=
-	ZSH_HIGHLIGHT_STYLES[globbing]=fg=blue,bold
-	ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue,bold
-	ZSH_HIGHLIGHT_STYLES[command-substitution]=none
-	ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]=fg=magenta
-	ZSH_HIGHLIGHT_STYLES[process-substitution]=none
-	ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]=fg=magenta
-	ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=magenta
-	ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=magenta
-	ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
-	ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]=fg=blue,bold
-	ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=yellow
-	ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=yellow
-	ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]=fg=yellow
-	ZSH_HIGHLIGHT_STYLES[rc-quote]=fg=magenta
-	ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=magenta
-	ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=magenta
-	ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=fg=magenta
-	ZSH_HIGHLIGHT_STYLES[assign]=none
-	ZSH_HIGHLIGHT_STYLES[redirection]=fg=blue,bold
-	ZSH_HIGHLIGHT_STYLES[comment]=fg=black,bold
-	ZSH_HIGHLIGHT_STYLES[named-fd]=none
-	ZSH_HIGHLIGHT_STYLES[numeric-fd]=none
-	ZSH_HIGHLIGHT_STYLES[arg0]=fg=green
-	ZSH_HIGHLIGHT_STYLES[bracket-error]=fg=red,bold
-	ZSH_HIGHLIGHT_STYLES[bracket-level-1]=fg=blue,bold
-	ZSH_HIGHLIGHT_STYLES[bracket-level-2]=fg=green,bold
-	ZSH_HIGHLIGHT_STYLES[bracket-level-3]=fg=magenta,bold
-	ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=yellow,bold
-	ZSH_HIGHLIGHT_STYLES[bracket-level-5]=fg=cyan,bold
-	ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
+    # ksharrays breaks the plugin. This is fixed now but let's disable it in the
+    # meantime.
+    # https://github.com/zsh-users/zsh-syntax-highlighting/pull/689
+    unsetopt ksharrays
+    . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+    ZSH_HIGHLIGHT_STYLES[default]=none
+    ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=red,bold
+    ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=cyan,bold
+    ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=green,underline
+    ZSH_HIGHLIGHT_STYLES[global-alias]=fg=magenta
+    ZSH_HIGHLIGHT_STYLES[precommand]=fg=green,underline
+    ZSH_HIGHLIGHT_STYLES[commandseparator]=fg=blue,bold
+    ZSH_HIGHLIGHT_STYLES[autodirectory]=fg=green,underline
+    ZSH_HIGHLIGHT_STYLES[path]=underline
+    ZSH_HIGHLIGHT_STYLES[path_pathseparator]=
+    ZSH_HIGHLIGHT_STYLES[path_prefix_pathseparator]=
+    ZSH_HIGHLIGHT_STYLES[globbing]=fg=blue,bold
+    ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=blue,bold
+    ZSH_HIGHLIGHT_STYLES[command-substitution]=none
+    ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter]=fg=magenta
+    ZSH_HIGHLIGHT_STYLES[process-substitution]=none
+    ZSH_HIGHLIGHT_STYLES[process-substitution-delimiter]=fg=magenta
+    ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=magenta
+    ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=magenta
+    ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
+    ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]=fg=blue,bold
+    ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=yellow
+    ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=yellow
+    ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]=fg=yellow
+    ZSH_HIGHLIGHT_STYLES[rc-quote]=fg=magenta
+    ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=magenta
+    ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=magenta
+    ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=fg=magenta
+    ZSH_HIGHLIGHT_STYLES[assign]=none
+    ZSH_HIGHLIGHT_STYLES[redirection]=fg=blue,bold
+    ZSH_HIGHLIGHT_STYLES[comment]=fg=black,bold
+    ZSH_HIGHLIGHT_STYLES[named-fd]=none
+    ZSH_HIGHLIGHT_STYLES[numeric-fd]=none
+    ZSH_HIGHLIGHT_STYLES[arg0]=fg=green
+    ZSH_HIGHLIGHT_STYLES[bracket-error]=fg=red,bold
+    ZSH_HIGHLIGHT_STYLES[bracket-level-1]=fg=blue,bold
+    ZSH_HIGHLIGHT_STYLES[bracket-level-2]=fg=green,bold
+    ZSH_HIGHLIGHT_STYLES[bracket-level-3]=fg=magenta,bold
+    ZSH_HIGHLIGHT_STYLES[bracket-level-4]=fg=yellow,bold
+    ZSH_HIGHLIGHT_STYLES[bracket-level-5]=fg=cyan,bold
+    ZSH_HIGHLIGHT_STYLES[cursor-matchingbracket]=standout
     fi
 else
     PROMPT='${debian_chroot:+($debian_chroot)}%n@%m:%~%# '
@@ -175,11 +175,11 @@ precmd() {
 
     # Print a new line before the prompt, but only if it is not the first line
     if [ "$new_line_before_prompt" = yes ]; then
-	if [ -z "$_NEW_LINE_BEFORE_PROMPT" ]; then
-	    _NEW_LINE_BEFORE_PROMPT=1
-	else
-	    print ""
-	fi
+    if [ -z "$_NEW_LINE_BEFORE_PROMPT" ]; then
+        _NEW_LINE_BEFORE_PROMPT=1
+    else
+        print ""
+    fi
     fi
 }
 
@@ -235,26 +235,26 @@ alias rm='echo -e "\e[31mNO rm !\e[0m Use mv !"'
 
 # git branch at right prompt
 if [ -f /usr/lib/git-core/git-sh-prompt ]; then
-	. /usr/lib/git-core/git-sh-prompt
- 	PROMPT=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)──}(%B%F{%(#.red.blue)}%n%(#.💀.@)%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]`__git_ps1 "-(%%B%%F{cyan}%s%%b%%F{%%(#.blue.green)})"`\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
-	GIT_PS1_STATESEPARATOR=" "
-	GIT_PS1_SHOWDIRTYSTATE="true"
-	GIT_PS1_SHOWUNTRACKEDFILES="true"
-	GIT_PS1_SHOWSTASHSTATE="true"
-	GIT_PS1_SHOWUPSTREAM="verbose"
+    . /usr/lib/git-core/git-sh-prompt
+    PROMPT=$'%F{%(#.blue.green)}┌──${debian_chroot:+($debian_chroot)──}(%B%F{%(#.red.blue)}%n%(#.💀.@)%m%b%F{%(#.blue.green)})-[%B%F{reset}%(6~.%-1~/…/%4~.%5~)%b%F{%(#.blue.green)}]`__git_ps1 "-(%%B%%F{cyan}%s%%b%%F{%%(#.blue.green)})"`\n└─%B%(#.%F{red}#.%F{blue}$)%b%F{reset} '
+    GIT_PS1_STATESEPARATOR=" "
+    GIT_PS1_SHOWDIRTYSTATE="true"
+    GIT_PS1_SHOWUNTRACKEDFILES="true"
+    GIT_PS1_SHOWSTASHSTATE="true"
+    GIT_PS1_SHOWUPSTREAM="verbose"
 
-# 	GIT_PS1_DESCRIBE_STYLE="contains"
-# 	GIT_PS1_SHOWCOLORHINTS="true"
+    # GIT_PS1_DESCRIBE_STYLE="contains"
+    # GIT_PS1_SHOWCOLORHINTS="true"
 fi
 
 # gpg-agent setup
 if [ -f /usr/bin/gpg ]; then
-        # set SSH_AUTH_SOCK
-        unset SSH_AGENT_PID
-        if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-                export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-        fi
-        # configure pinentry to use the correct TTY
-        export GPG_TTY=$(tty)
-        gpg-connect-agent updatestartuptty /bye >/dev/null
+    # set SSH_AUTH_SOCK
+    unset SSH_AGENT_PID
+    if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+        export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+    fi
+    # configure pinentry to use the correct TTY
+    export GPG_TTY=$(tty)
+    gpg-connect-agent updatestartuptty /bye >/dev/null
 fi
