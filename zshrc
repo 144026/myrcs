@@ -231,7 +231,11 @@ alias gitacp='git add -A && git commit && git push'
 
 alias rs='rsync -avh --progress'
 
-alias rm='echo -e "\e[31mNO rm !\e[0m Use mv !"'
+alias rm='echo -e "\e[31mNO rm !\e[0m Use mm !"'
+function mm {
+	local tmpdir=$(mktemp -d -p /dev/shm)
+	mv "$@" $tmpdir
+}
 
 # git branch at right prompt
 if [ -f /usr/lib/git-core/git-sh-prompt ]; then
