@@ -262,3 +262,16 @@ if [ -f /usr/bin/gpg ]; then
     export GPG_TTY=$(tty)
     gpg-connect-agent updatestartuptty /bye >/dev/null
 fi
+
+if [ "x" = ${WSL_DISTRO_NAME+x} ]; then
+	# NOTE: msedge.exe shortcut for WSL2, 2 prerequisites as below:
+	# 1. add msedge.exe to your PATH, or create a symlink in /usr/bin
+	# 2. make sure msedge.exe is executable. If your mount with '-o fmask=111',
+	#    you have specify '-ometadata' mount option and run 'chmod +x' with
+	#    administrator privilege (Windows) under root (WSL).
+	function edge {
+		for file in "$@"; do
+			msedge.exe 'file://wsl$/kali-linux'"$(realpath "$file")"
+		done
+	}
+fi
