@@ -2,3 +2,5 @@ $pdflatex = 'pdflatex -shell-escape -interaction=nonstopmode -file-line-error -s
 $xelatex = 'xelatex -shell-escape -interaction=nonstopmode -file-line-error -synctex=1 %O %S';
 $lualatex = 'lualatex -shell-escape -interaction=nonstopmode -file-line-error -synctex=1 %O %S';
 $clean_ext = 'synctex.gz synctex.gz(busy) bbl bcf fdb_latexmk run tdo xdv fls';
+$out_dir = 'build';
+$aux_dir = 'build'
